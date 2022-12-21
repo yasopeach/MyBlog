@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Abstract;
+﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Repositories;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -6,31 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Repositories
+namespace BusinessLayer.Concrete
 {
-    public class CommentRepository : IGenericDal<Comment>
+    public class CategoryManager : ICategoryService
     {
-        public void Delete(Comment t)
+        GenericRepository<Category> repo = new GenericRepository<Category>();
+        public void CategoryAdd(Category category)
         {
             throw new NotImplementedException();
         }
 
-        public Comment GetById(int id)
+        public void CategoryDelete(Category category)
         {
             throw new NotImplementedException();
         }
 
-        public List<Comment> GetListAll()
+        public void CategoryUpdate(Category category)
         {
             throw new NotImplementedException();
         }
 
-        public void Insert(Comment t)
+        public Category GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Comment t)
+        public List<Category> GetList()
         {
             throw new NotImplementedException();
         }
