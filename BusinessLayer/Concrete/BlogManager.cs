@@ -33,6 +33,11 @@ namespace BusinessLayer.Concrete
 			throw new NotImplementedException();
 		}
 
+		public List<Blog> GetBlogListWithCategory()
+		{
+			return _blogDal.GetListWithCategory();
+		}
+
 		public Category GetById(int id)
 		{
 			throw new NotImplementedException();
